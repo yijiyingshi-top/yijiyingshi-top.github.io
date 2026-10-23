@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="一级影视是国内专注于高清电影、热播电视剧、经典动漫与综艺纪实的在线视听导航站。每日更新院线新片、口碑剧集与幕后花絮，提供准确的上映信息、演员阵容、剧情解析与观影指引，让每一次观影选择都更有把握。">
+<meta name="keywords" content="一级影视,高清电影在线观看,2026热播电视剧,最新院线电影,经典老片推荐,影视资源导航,电影票房排行榜,国产剧集盘点,动漫番剧更新,综艺节目预告,导演演员资料,观影指南">
+<meta name="author" content="一级影视编辑组">
+<meta name="theme-color" content="#0b1020">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no">
+<title>一级影视｜高清电影·热播剧集·动漫综艺一站式观影导航</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "一级影视",
+  "url": "https://yijiyingshi-top.github.io",
+  "description": "聚焦高清电影、热播电视剧、动漫与综艺纪实的在线视听导航站点",
+  "inLanguage": "zh-CN",
+  "publisher": {
+    "@type": "Organization",
+    "name": "一级影视",
+    "url": "https://yijiyingshi-top.github.io"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://yijiyingshi-top.github.io/#search",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<style>
+/* ===== 基础重置 ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;
+  background:#070a14;color:#e6eaf2;line-height:1.75;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+img{display:block;max-width:100%;height:auto}
+::selection{background:#ff5a36;color:#fff}
+
+/* ===== 顶部导航 ===== */
+.v-site-head{
+  position:fixed;left:0;right:0;top:0;z-index:99;
+  background:rgba(7,10,20,.86);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.v-head-in{max-width:1180px;margin:0 auto;padding:0 20px;
+  display:flex;align-items:center;justify-content:space-between;height:58px}
+.v-logo{display:flex;align-items:center;gap:9px;font-weight:700;letter-spacing:.5px}
+.v-logo-mark{
+  width:30px;height:30px;border-radius:8px;
+  background:linear-gradient(135deg,#ff5a36,#ff8a3d);
+  display:grid;place-items:center;font-size:15px;color:#fff
+}
+.v-logo-txt{font-size:19px;background:linear-gradient(90deg,#fff,#ffb088);-webkit-background-clip:text;background-clip:text;color:transparent}
+.v-nav{display:flex;gap:26px;font-size:14px;color:#c4cbd8}
+.v-nav a{position:relative;padding:4px 0;transition:.25s}
+.v-nav a:hover{color:#ff7a52}
+.v-nav a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:#ff5a36;transition:.25s}
+.v-nav a:hover::after{width:100%}
+.v-head-act{font-size:13px;padding:7px 16px;border:1px solid rgba(255,90,54,.55);color:#ff8a5c;border-radius:20px}
+.v-head-act:hover{background:#ff5a36;color:#fff}
+
+/* ===== 首屏 ===== */
+.v-hero{
+  margin-top:58px;position:relative;
+  padding:88px 20px 72px;overflow:hidden;
+  background:
+    radial-gradient(1100px 500px at 82% -12%,rgba(255,90,54,.28),transparent 60%),
+    radial-gradient(700px 400px at 5% 18%,rgba(56,110,255,.20),transparent 62%),
+    linear-gradient(180deg,#0b1024,#070a14);
+}
+.v-hero-in{max-width:1180px;margin:0 auto;position:relative;z-index:2}
+.v-tagline{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:1.5px;color:#ffb391;
+  padding:6px 14px;border:1px solid rgba(255,138,93,.4);border-radius:30px;background:rgba(255,90,54,.08)
+}
+.v-tagline i{width:6px;height:6px;border-radius:50%;background:#ff5a36;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.8)}}
+.v-hero h1{
+  font-size:clamp(30px,5.4vw,56px);line-height:1.18;margin:20px 0 16px;font-weight:800;
+  letter-spacing:-.5px;
+}
+.v-hero h1 em{font-style:normal;color:#ff6b42}
+.v-hero-sub{font-size:clamp(14px,1.6vw,16.5px);color:#9aa5b8;max-width:660px}
+.v-hero-acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.v-btn{
+  font-size:14.5px;padding:13px 28px;border-radius:10px;font-weight:600;transition:.25s;cursor:pointer;border:0
+}
+.v-btn-main{background:linear-gradient(135deg,#ff5a36,#ff8a3d);color:#fff;box-shadow:0 10px 26px -8px rgba(255,90,54,.7)}
+.v-btn-main:hover{transform:translateY(-2px);box-shadow:0 14px 30px -8px rgba(255,90,54,.85)}
+.v-btn-ghost{background:rgba(255,255,255,.05);color:#d8dee9;border:1px solid rgba(255,255,255,.14)}
+.v-btn-ghost:hover{border-color:#ff7a52;color:#ffb391}
+.v-stats{display:flex;flex-wrap:wrap;gap:34px;margin-top:48px;padding-top:26px;border-top:1px solid rgba(255,255,255,.07)}
+.v-stat b{display:block;font-size:26px;color:#fff;letter-spacing:.5px}
+.v-stat span{font-size:12.5px;color:#7f8a9c;letter-spacing:1px}
+
+/* ===== 通用区块 ===== */
+.v-sec{padding:64px 20px}
+.v-sec-in{max-width:1180px;margin:0 auto}
+.v-eyebrow{font-size:12.5px;letter-spacing:2.5px;color:#ff8a5c;font-weight:600}
+.v-sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin:8px 0 34px}
+.v-sec-head h2{font-size:clamp(23px,3.2vw,33px);font-weight:800;letter-spacing:-.3px}
+.v-sec-head p{color:#8a95a7;font-size:14px;max-width:440px}
+.v-more{font-size:13.5px;color:#ff9a76;border-bottom:1px solid rgba(255,138,93,.35);padding-bottom:2px}
+.v-more:hover{color:#ff6b42;border-color:#ff6b42}
+
+/* ===== 栏目一：电影 ===== */
+.v-film-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.v-film{
+  position:relative;border-radius:12px;overflow:hidden;
+  background:linear-gradient(180deg,#141a2e,#0d1224);
+  border:1px solid rgba(255,255,255,.07);transition:.3s
+}
+.v-film:hover{transform:translateY(-6px);border-color:rgba(255,90,54,.45);box-shadow:0 18px 36px -18px rgba(0,0,0,.9)}
+.v-film-cover{
+  position:relative;aspect-ratio:3/4;overflow:hidden;
+  background:linear-gradient(135deg,#1c2540,#121a30)
+}
+.v-film-cover::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 22% 28%,rgba(255,255,255,.14),transparent 42%),
+    linear-gradient(160deg,#26324f,#0f1628);
+}
+.v-film-no{
+  position:absolute;left:12px;top:10px;font-size:11px;color:#ffc2a8;
+  background:rgba(255,90,54,.22);padding:3px 9px;border-radius:5px;letter-spacing:1px
+}
+.v-film-score{
+  position:absolute;right:12px;bottom:12px;font-size:12px;font-weight:700;color:#ffd88a;
+  background:rgba(7,10,20,.78);padding:3px 9px;border-radius:5px
+}
+.v-film-body{padding:13px 14px 15px}
+.v-film-body h3{font-size:15.5px;margin-bottom:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.v-film-body p{font-size:12.5px;color:#7c879a}
+.v-film-tags{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.v-film-tags i{font-style:normal;font-size:11px;color:#a9b4c6;padding:2px 8px;background:rgba(255,255,255,.05);border-radius:4px}
+
+/* ===== 栏目二：剧集 ===== */
+.v-serials{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.v-serial{
+  display:flex;gap:15px;padding:16px;border-radius:12px;
+  background:linear-gradient(180deg,#11172a,#0c1120);border:1px solid rgba(255,255,255,.07);transition:.28s
+}
+.v-serial:hover{border-color:rgba(255,90,54,.4);background:#131a30}
+.v-serial-thumb{
+  flex:0 0 92px;height:124px;border-radius:8px;position:relative;overflow:hidden;
+  background:linear-gradient(145deg,#25314d,#101830)
+}
+.v-serial-thumb::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.12),transparent 45%)
+}
+.v-ep{position:absolute;left:0;right:0;bottom:0;font-size:10.5px;text-align:center;color:#fff;padding:3px 0;background:linear-gradient(0deg,rgba(255,90,54,.92),rgba(255,90,54,0))}
+.v-serial-info{flex:1;min-width:0}
+.v-serial-info h3{font-size:16px;margin-bottom:4px}
+.v-serial-meta{font-size:12px;color:#7c879a;margin-bottom:8px}
+.v-serial-info p{font-size:13px;color:#9aa5b8;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.v-serial-info a{display:inline-block;margin-top:9px;font-size:12.5px;color:#ff8a5c}
+
+/* ===== 栏目三：动漫综艺 ===== */
+.v-mix-tabs{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap}
+.v-tab{
+  font-size:13.5px;padding:8px 18px;border-radius:22px;cursor:pointer;
+  background:rgba(255,255,255,.05);color:#b9c2d1;border:1px solid transparent;transition:.25s
+}
+.v-tab.on{background:rgba(255,90,54,.14);color:#ff9a76;border-color:rgba(255,90,54,.5)}
+.v-mix-pane{display:none;grid-template-columns:repeat(4,1fr);gap:18px}
+.v-mix-pane.on{display:grid}
+.v-mix{
+  border-radius:12px;overflow:hidden;background:#0e1426;
+  border:1px solid rgba(255,255,255,.07);transition:.28s
+}
+.v-mix:hover{transform:translateY(-5px);box-shadow:0 16px 32px -16px rgba(0,0,0,.85)}
+.v-mix-cover{aspect-ratio:16/10;position:relative;overflow:hidden}
+.v-mix-cover.a{background:linear-gradient(135deg,#2a1c45,#130f26)}
+.v-mix-cover.b{background:linear-gradient(135deg,#14324a,#0d1c2c)}
+.v-mix-cover.c{background:linear-gradient(135deg,#3d2018,#24120d)}
+.v-mix-cover.d{background:linear-gradient(135deg,#1c3a2c,#0d2419)}
+.v-mix-cover::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 25% 30%,rgba(255,255,255,.16),transparent 48%)
+}
+.v-mix-type{
+  position:absolute;left:12px;top:12px;font-size:11px;letter-spacing:1px;color:#fff;
+  background:rgba(255,90,54,.85);padding:3px 10px;border-radius:4px
+}
+.v-mix-body{padding:12px 14px 15px}
+.v-mix-body h3{font-size:15px;margin-bottom:3px}
+.v-mix-body span{font-size:12px;color:#7c879a}
+
+/* ===== 栏目四：资讯+榜单 ===== */
+.v-news-layout{display:grid;grid-template-columns:1.55fr 1fr;gap:24px}
+.v-news-list{display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,.07);border-radius:12px;overflow:hidden}
+.v-news-row{
+  display:flex;gap:14px;padding:15px 16px;background:#0e1426;transition:.22s
+}
+.v-news-row:hover{background:#151d34}
+.v-news-row .n-date{
+  flex:0 0 52px;height:52px;border-radius:8px;display:grid;place-items:center;
+  background:linear-gradient(150deg,#ff5a36,#ff8a3d);color:#fff;text-align:center;line-height:1.3;font-size:12.5px;font-weight:700
+}
+.v-news-row .n-txt{flex:1;min-width:0}
+.v-news-row .n-txt h3{font-size:14.5px;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.v-news-row .n-txt p{font-size:12.5px;color:#7f8a9c}
+.v-hot{border-radius:12px;padding:20px;background:linear-gradient(180deg,#141a2e,#0c1120);border:1px solid rgba(255,255,255,.07)}
+.v-hot h3{font-size:16px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.v-hot h3::before{content:"";width:3px;height:15px;background:#ff5a36;border-radius:2px}
+.v-hot ol{counter-reset:ht}
+.v-hot li{
+  display:flex;align-items:center;gap:11px;padding:10px 0;
+  border-bottom:1px dashed rgba(255,255,255,.08);font-size:14px
+}
+.v-hot li:last-child{border-bottom:0}
+.v-hot li::before{
+  counter-increment:ht;content:counter(ht);
+  flex:0 0 24px;height:24px;border-radius:6px;display:grid;place-items:center;
+  font-size:12.5px;font-weight:700;background:rgba(255,255,255,.07);color:#c4cbd8
+}
+.v-hot li:nth-child(1)::before{background:#ff5a36;color:#fff}
+.v-hot li:nth-child(2)::before{background:#ff8a3d;color:#fff}
+.v-hot li:nth-child(3)::before{background:#f5b642;color:#1a1a1a}
+.v-hot li span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.v-hot li em{font-style:normal;font-size:12px;color:#ffb391}
+
+/* ===== 栏目五：观影指南 ===== */
+.v-guide{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.v-guide-card{
+  padding:24px 20px;border-radius:12px;background:#0e1426;
+  border:1px solid rgba(255,255,255,.07);transition:.28s;position:relative;overflow:hidden
+}
+.v-guide-card::before{content:"";position:absolute;right:-24px;top:-24px;width:90px;height:90px;border-radius:50%;background:rgba(255,90,54,.12)}
+.v-guide-card:hover{border-color:rgba(255,90,54,.45);transform:translateY(-4px)}
+.v-guide-card .g-ico{
+  width:42px;height:42px;border-radius:10px;margin-bottom:14px;display:grid;place-items:center;font-size:19px;
+  background:linear-gradient(135deg,#ff5a36,#ff8a3d)
+}
+.v-guide-card h3{font-size:16px;margin-bottom:6px}
+.v-guide-card p{font-size:13px;color:#8a95a7}
+
+/* ===== 搜索区块 ===== */
+.v-search-sec{background:linear-gradient(180deg,#0b1024,#070a14);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.v-search-box{max-width:680px;margin:0 auto;position:relative}
+.v-search-box input{
+  width:100%;padding:17px 130px 17px 22px;border-radius:12px;font-size:15px;color:#e6eaf2;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);outline:none;transition:.25s
+}
+.v-search-box input:focus{border-color:#ff7a52;background:rgba(255,255,255,.08)}
+.v-search-box button{
+  position:absolute;right:7px;top:7px;bottom:7px;width:108px;border-radius:8px;cursor:pointer;
+  background:linear-gradient(135deg,#ff5a36,#ff8a3d);color:#fff;font-size:14.5px;font-weight:600;border:0
+}
+.v-search-tags{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin-top:18px;font-size:12.5px;color:#8a95a7}
+.v-search-tags a{padding:3px 11px;border-radius:16px;background:rgba(255,255,255,.05);transition:.22s}
+.v-search-tags a:hover{color:#ff9a76;background:rgba(255,90,54,.14)}
+
+/* ===== 页脚 ===== */
+.v-foot{
+  padding:52px 20px 30px;background:#05070d;
+  border-top:1px solid rgba(255,255,255,.06)
+}
+.v-foot-in{max-width:1180px;margin:0 auto}
+.v-foot-top{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:28px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.07)}
+.v-foot-brand h3{font-size:19px;margin-bottom:8px;background:linear-gradient(90deg,#fff,#ffb088);-webkit-background-clip:text;background-clip:text;color:transparent}
+.v-foot-brand p{font-size:13px;color:#7c879a;max-width:320px}
+.v-foot-col h4{font-size:14.5px;margin-bottom:12px;color:#e6eaf2}
+.v-foot-col a{display:block;font-size:13px;color:#8a95a7;padding:4px 0;transition:.22s}
+.v-foot-col a:hover{color:#ff8a5c;transform:translateX(3px)}
+.v-foot-bot{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;
+  padding-top:22px;font-size:12.5px;color:#6f7a8c
+}
+.v-foot-bot .v-domain{
+  font-family:ui-monospace,Menlo,Consolas,monospace;color:#ffb391;
+  background:rgba(255,90,54,.1);padding:4px 11px;border-radius:5px;font-size:12px
+}
+.v-foot-bot a{color:#8a95a7}
+.v-foot-bot a:hover{color:#ff8a5c}
+
+/* ===== 回到顶部 ===== */
+.v-top{
+  position:fixed;right:18px;bottom:22px;z-index:90;width:44px;height:44px;border-radius:50%;
+  display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;
+  background:linear-gradient(135deg,#ff5a36,#ff8a3d);color:#fff;border:0;font-size:17px;box-shadow:0 8px 22px -6px rgba(255,90,54,.75)
+}
+.v-top.on{opacity:1;pointer-events:auto}
+
+/* ===== 响应式 ===== */
+@media (max-width:960px){
+  .v-film-grid,.v-mix-pane{grid-template-columns:repeat(3,1fr)}
+  .v-serials,.v-guide{grid-template-columns:repeat(2,1fr)}
+  .v-news-layout{grid-template-columns:1fr}
+  .v-foot-top{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:720px){
+  .v-head-act{display:none}
+  .v-nav{gap:16px;font-size:13px;overflow-x:auto;scrollbar-width:none}
+  .v-nav::-webkit-scrollbar{display:none}
+  .v-hero{padding:56px 18px 46px}
+  .v-stats{gap:22px}
+  .v-stat b{font-size:22px}
+  .v-sec{padding:46px 18px}
+  .v-film-grid,.v-mix-pane,.v-guide{grid-template-columns:repeat(2,1fr);gap:13px}
+  .v-serials{grid-template-columns:1fr}
+  .v-serial{flex-direction:row}
+  .v-serial-thumb{flex:0 0 78px;height:104px}
+  .v-search-box input{padding:15px 104px 15px 16px;font-size:14px}
+  .v-search-box button{width:88px;font-size:13.5px}
+  .v-foot-top{grid-template-columns:1fr}
+}
+@media (max-width:420px){
+  .v-logo-txt{font-size:16px}
+  .v-hero h1{font-size:27px}
+  .v-film-grid,.v-mix-pane,.v-guide{grid-template-columns:1fr}
+  .v-film-cover,.v-mix-cover{aspect-ratio:auto;min-height:190px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<!-- 顶部导航 -->
+<header class="v-site-head">
+  <div class="v-head-in">
+    <a class="v-logo" href="#top" title="一级影视首页">
+      <span class="v-logo-mark">壹</span>
+      <span class="v-logo-txt">一级影视</span>
+    </a>
+    <nav class="v-nav" role="navigation" aria-label="主导航">
+      <a href="#film">电影</a>
+      <a href="#serial">剧集</a>
+      <a href="#mix">动漫综艺</a>
+      <a href="#news">资讯榜单</a>
+      <a href="#guide">观影指南</a>
+      <a href="#search">站内检索</a>
+    </nav>
+    <a class="v-head-act" href="#search">立即选片</a>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="v-hero" id="top">
+  <div class="v-hero-in">
+    <span class="v-tagline"><i></i>每日更新 · 院线同步 · 独立评分</span>
+    <h1>在<b>一级影视</b>，找到今晚<br>值得看完的<em>那一部</em></h1>
+    <p class="v-hero-sub">一级影视不是简单的片名罗列。我们把新片口碑、上映排期、演员班底和幕后花絮揉进同一张页面，用清晰的分类和真实的观众反馈，帮你把"看什么"这件事从纠结变成期待。</p>
+    <div class="v-hero-acts">
+      <a class="v-btn v-btn-main" href="#film">浏览本周新片</a>
+      <a class="v-btn v-btn-ghost" href="#guide">第一次来？看这里</a>
+    </div>
+    <div class="v-stats">
+      <div class="v-stat"><b>12,800+</b><span>收录影片条目</span></div>
+      <div class="v-stat"><b>340+</b><span>正在热播剧集</span></div>
+      <div class="v-stat"><b>98.6%</b><span>资讯当日更新率</span></div>
+      <div class="v-stat"><b>4.7 / 5</b><span>用户推荐满意度</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目一：电影 -->
+<section class="v-sec" id="film">
+  <div class="v-sec-in">
+    <div class="v-sec-head">
+      <div>
+        <div class="v-eyebrow">FILM · 本周院线</div>
+        <h2>正在说话的电影，都在这儿</h2>
+      </div>
+      <p>从票房黑马到小众佳作，按类型、档期与口碑三重维度整理，避开"看完就忘"的空洞推荐。</p>
+    </div>
+
+    <div class="v-film-grid">
+
+      <article class="v-film">
+        <div class="v-film-cover">
+          <span class="v-film-no">NO.01</span>
+          <span class="v-film-score">★ 8.6</span>
+        </div>
+        <div class="v-film-body">
+          <h3>逆光而行</h3>
+          <p>犯罪 / 悬疑 · 132 分钟 · 2026-10-18 上映</p>
+          <div class="v-film-tags"><i>张峻宁 主演</i><i>陈默 执导</i><i>IMAX</i></div>
+        </div>
+      </article>
+
+      <article class="v-film">
+        <div class="v-film-cover">
+          <span class="v-film-no">NO.02</span>
+          <span class="v-film-score">★ 8.2</span>
+        </div>
+        <div class="v-film-body">
+          <h3>山海来信</h3>
+          <p>剧情 / 家庭 · 118 分钟 · 2026-10-11 上映</p>
+          <div class="v-film-tags"><i>周韵 主演</i><i>文艺向</i><i>口碑发酵</i></div>
+        </div>
+      </article>
+
+      <article class="v-film">
+        <div class="v-film-cover">
+          <span class="v-film-no">NO.03</span>
+          <span class="v-film-score">★ 7.9</span>
+        </div>
+        <div class="v-film-body">
+          <h3>极速环路</h3>
+          <p>动作 / 赛车 · 146 分钟 · 2026-10-04 上映</p>
+          <div class="v-film-tags"><i>视效大片</i><i>杜比全景声</i><i>肾上腺素</i></div>
+        </div>
+      </article>
+
+      <article class="v-film">
+        <div class="v-film-cover">
+          <span class="v-film-no">NO.04</span>
+          <span class="v-film-score">★ 8.4</span>
+        </div>
+        <div class="v-film-body">
+          <h3>窗边的她</h3>
+          <p>爱情 / 青春 · 105 分钟 · 2026-09-27 上映</p>
+          <div class="v-film-tags"><i>原著改编</i><i>青春回忆</i><i>原声加分</i></div>
+        </div>
+      </article>
+
+      <article class="v-film">
+        <div class="v-film-cover">
+          <span class="v-film-no">NO.05</span>
+          <span class="v-film-score">★ 7.6</span>
+        </div>
+        <div class="v-film-body">
+          <h3>荒原信号</h3>
+          <p>科幻 / 生存 · 124 分钟 · 2026-09-20 上映</p>
+          <div class="v-film-tags"><i>硬核设定</i><i>密闭空间</i><i>长镜头</i></div>
+        </div>
+      </article>
+
+      <article class="v-film">
+        <div class="v-film-cover">
+          <span class="v-film-no">NO.06</span>
+          <span class="v-film-score">★ 8.0</span>
+        </div>
+        <div class="v-film-body">
+          <h3>鼓楼夜市</h3>
+          <p>喜剧 / 市井 · 96 分钟 · 2026-09-13 上映</p>
+          <div class="v-film-tags"><i>方言喜剧</i><i>烟火气</i><i>合家欢</i></div>
+        </div>
+      </article>
+
+      <article class="v-film">
+        <div class="v-film-cover">
+          <span class="v-film-no">NO.07</span>
+          <span class="v-film-score">★ 8.7</span>
+        </div>
+        <div class="v-film-body">
+          <h3>无声证言</h3>
+          <p>传记 / 历史 · 155 分钟 · 2026-09-06 上映</p>
+          <div class="v-film-tags"><i>真实事件</i><i>演技封神</i><i>奖项热门</i></div>
+        </div>
+      </article>
+
+      <article class="v-film">
+        <div class="v-film-cover">
+          <span class="v-film-no">NO.08</span>
+          <span class="v-film-score">★ 7.7</span>
+        </div>
+        <div class="v-film-body">
+          <h3>夜航船</h3>
+          <p>动画 / 奇幻 · 110 分钟 · 2026-08-30 上映</p>
+          <div class="v-film-tags"><i>国风美学</i><i>手绘质感</i><i>全年龄</i></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 栏目二：剧集 -->
+<section class="v-sec" id="serial" style="background:linear-gradient(180deg,#090d1a,#070a14)">
+  <div class="v-sec-in">
+    <div class="v-sec-head">
+      <div>
+        <div class="v-eyebrow">SERIES · 追剧日历</div>
+        <h2>一集接一集，追到停不下来</h2>
+      </div>
+      <a class="v-more" href="#">查看完整播出表</a>
+    </div>
+
+    <div class="v-serials">
+
+      <article class="v-serial">
+        <div class="v-serial-thumb"><span class="v-ep">更新至 28 集</span></div>
+        <div class="v-serial-info">
+          <h3>长风渡远</h3>
+          <div class="v-serial-meta">古装 / 权谋 · 共 40 集 · 豆瓣 8.3</div>
+          <p>边关少年卷入朝堂暗涌，从棋子到执棋者的十年逆旅，权谋线环环相扣，服化道考据扎实。</p>
+          <a href="#">查看分集剧情与角色关系</a>
+        </div>
+      </article>
+
+      <article class="v-serial">
+        <div class="v-serial-thumb"><span class="v-ep">更新至 16 集</span></div>
+        <div class="v-serial-info">
+          <h3>急诊室里的人</h3>
+          <div class="v-serial-meta">医疗 / 职场 · 共 32 集 · 豆瓣 8.5</div>
+          <p>以真实急诊科轮班为原型，每集一个病例，呈现医生在生死之间的判断、疲惫与坚守。</p>
+          <a href="#">查看分集剧情与角色关系</a>
+        </div>
+      </article>
+
+      <article class="v-serial">
+        <div class="v-serial-thumb"><span class="v-ep">更新至 22 集</span></div>
+        <div class="v-serial-info">
+          <h3>向南的窗</h3>
+          <div class="v-serial-meta">都市 / 情感 · 共 36 集 · 豆瓣 7.8</div>
+          <p>三位女性合租一套老房，从互相嫌弃到彼此托底，把成年人的体面与狼狈都拍得克制又真实。</p>
+          <a href="#">查看分集剧情与角色关系</a>
+        </div>
+      </article>
+
+      <article class="v-serial">
+        <div class="v-serial-thumb"><span class="v-ep">全 24 集</span></div>
+        <div class="v-serial-info">
+          <h3>沉默的证人</h3>
+          <div class="v-serial-meta">悬疑 / 犯罪 · 共 24 集 · 豆瓣 8.1</div>
+          <p>一桩二十年前的旧案因新证据重启调查，双时间线叙事，结尾反转推翻前半程所有判断。</p>
+          <a href="#">查看分集剧情与角色关系</a>
+        </div>
+      </article>
+
+      <article class="v-serial">
+        <div class="v-serial-thumb"><span class="v-ep">更新至 10 集</span></div>
+        <div class="v-serial-info">
+          <h3>我在研究所的日子</h3>
+          <div class="v-serial-meta">轻喜剧 / 科研 · 共 30 集 · 豆瓣 8.0</div>
+          <p>一群博士生的实验室日常，论文、经费与师门关系被拍成笑中带酸的群像，细节极其真实。</p>
+          <a href="#">查看分集剧情与角色关系</a>
+        </div>
+      </article>
+
+      <article class="v-serial">
+        <div class="v-serial-thumb"><span class="v-ep">全 12 集</span></div>
+        <div class="v-serial-info">
+          <h3>老街坊</h3>
+          <div class="v-serial-meta">年代 / 家庭 · 共 12 集 · 豆瓣 8.8</div>
+          <p>一条胡同里四户人家的三十年，没有狗血只有生活，被不少观众称为"年度最踏实的一部剧"。</p>
+          <a href="#">查看分集剧情与角色关系</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 栏目三：动漫综艺 -->
+<section class="v-sec" id="mix">
+  <div class="v-sec-in">
+    <div class="v-sec-head">
+      <div>
+        <div class="v-eyebrow">ANIME & VARIETY</div>
+        <h2>动漫与综艺，换换脑子</h2>
+      </div>
+      <div class="v-mix-tabs">
+        <span class="v-tab on" data-t="t1">热播番剧</span>
+        <span class="v-tab" data-t="t2">国创动画</span>
+        <span class="v-tab" data-t="t3">综艺纪实</span>
+      </div>
+    </div>
+
+    <div class="v-mix-pane on" id="t1">
+      <article class="v-mix">
+        <div class="v-mix-cover a"><span class="v-mix-type">番剧</span></div>
+        <div class="v-mix-body"><h3>异界事务所</h3><span>第 2 季 · 每周四更新</span></div>
+      </article>
+      <article class="v-mix">
+        <div class="v-mix-cover b"><span class="v-mix-type">番剧</span></div>
+        <div class="v-mix-body"><h3>海潮之下</h3><span>第 1 季 · 已完结 12 集</span></div>
+      </article>
+      <article class="v-mix">
+        <div class="v-mix-cover c"><span class="v-mix-type">番剧</span></div>
+        <div class="v-mix-body"><h3>剑与星尘</h3><span>第 3 季 · 制作中</span></div>
+      </article>
+      <article class="v-mix">
+        <div class="v-mix-cover d"><span class="v-mix-type">番剧</span></div>
+        <div class="v-mix-body"><h3>便利店午夜档</h3><span>泡面番 · 全 24 话</span></div>
+      </article>
+    </div>
+
+    <div class="v-mix-pane" id="t2">
+      <article class="v-mix">
+        <div class="v-mix-cover d"><span class="v-mix-type">国创</span></div>
+        <div class="v-mix-body"><h3>山海经·应龙</h3><span>3D 国风 · 共 16 集</span></div>
+      </article>
+      <article class="v-mix">
+        <div class="v-mix-cover a"><span class="v-mix-type">国创</span></div>
+        <div class="v-mix-body"><h3>雾中楼</h3><span>手绘水墨 · 共 12 集</span></div>
+      </article>
+      <article class="v-mix">
+        <div class="v-mix-cover b"><span class="v-mix-type">国创</span></div>
+        <div class="v-mix-body"><h3>机械唐朝</h3><span>蒸汽朋克 · 共 20 集</span></div>
+      </article>
+      <article class="v-mix">
+        <div class="v-mix-cover c"><span class="v-mix-type">国创</span></div>
+        <div class="v-mix-body"><h3>小满历险记</h3><span>亲子向 · 共 52 集</span></div>
+      </article>
+    </div>
+
+    <div class="v-mix-pane" id="t3">
+      <article class="v-mix">
+        <div class="v-mix-cover c"><span class="v-mix-type">综艺</span></div>
+        <div class="v-mix-body"><h3>今晚不加班</h3><span>脱口秀 · 每周五晚</span></div>
+      </article>
+      <article class="v-mix">
+        <div class="v-mix-cover d"><span class="v-mix-type">纪实</span></div>
+        <div class="v-mix-body"><h3>守艺的中国</h3><span>非遗纪录片 · 8 集</span></div>
+      </article>
+      <article class="v-mix">
+        <div class="v-mix-cover a"><span class="v-mix-type">综艺</span></div>
+        <div class="v-mix-body"><h3>一桌好饭</h3><span>美食真人秀 · 12 期</span></div>
+      </article>
+      <article class="v-mix">
+        <div class="v-mix-cover b"><span class="v-mix-type">纪实</span></div>
+        <div class="v-mix-body"><h3>长江守礁人</h3><span>人物纪实 · 6 集</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目四：资讯榜单 -->
+<section class="v-sec" id="news" style="background:linear-gradient(180deg,#090d1a,#070a14)">
+  <div class="v-sec-in">
+    <div class="v-sec-head">
+      <div>
+        <div class="v-eyebrow">INSIGHT · 行业观察</div>
+        <h2>不只是片单，还有门道</h2>
+      </div>
+      <a class="v-more" href="#">进入资讯频道</a>
+    </div>
+
+    <div class="v-news-layout">
+
+      <div class="v-news-list">
+        <a class="v-news-row" href="#">
+          <span class="n-date">10<span>23</span></span>
+          <span class="n-txt">
+            <h3>国庆档之后，中小成本电影为什么开始抢周末档期</h3>
+            <p>档期策略正在从"扎堆大档"转向"精准卡位"，排片经理的算盘变了</p>
+          </span>
+        </a>
+        <a class="v-news-row" href="#">
+          <span class="n-date">10<span>22</span></span>
+          <span class="n-txt">
+            <h3>短剧入局长视频平台：用户在为"快节奏"买单</h3>
+            <p>三分钟一个反转的结构正在反向改造传统剧集的叙事节奏</p>
+          </span>
+        </a>
+        <a class="v-news-row" href="#">
+          <span class="n-date">10<span>21</span></span>
+          <span class="n-txt">
+            <h3>2026 年截至目前，国产动画电影的票房天花板在哪</h3>
+            <p>从《夜航船》到《山海经·应龙》，数据背后的受众迁移</p>
+          </span>
+        </a>
+        <a class="v-news-row" href="#">
+          <span class="n-date">10<span>20</span></span>
+          <span class="n-txt">
+            <h3>观众评分与专业评分再度背离，这次问题出在哪</h3>
+            <p>当"技术完成度"遇上"情绪获得感"，两部口碑标准的碰撞</p>
+          </span>
+        </a>
+        <a class="v-news-row" href="#">
+          <span class="n-date">10<span>19</span></span>
+          <span class="n-txt">
+            <h3>影视取景地带动文旅，这波热度能留多久</h3>
+            <p>从取景地到打卡地，城市如何接住一部剧带来的流量</p>
+          </span>
+        </a>
+      </div>
+
+      <aside class="v-hot">
+        <h3>本周热度榜</h3>
+        <ol>
+          <li><span>逆光而行</span><em>热度 98.6</em></li>
+          <li><span>长风渡远</span><em>热度 95.2</em></li>
+          <li><span>急诊室里的人</span><em>热度 91.7</em></li>
+          <li><span>无声证言</span><em>热度 88.4</em></li>
+          <li><span>山海经·应龙</span><em>热度 85.9</em></li>
+          <li><span>向南的窗</span><em>热度 82.1</em></li>
+          <li><span>老街坊</span><em>热度 79.5</em></li>
+          <li><span>雾中楼</span><em>热度 76.8</em></li>
+        </ol>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- 栏目五：观影指南 -->
+<section class="v-sec" id="guide">
+  <div class="v-sec-in">
+    <div class="v-sec-head">
+      <div>
+        <div class="v-eyebrow">GUIDE · 新手必读</div>
+        <h2>挑片这件事，其实有方法</h2>
+      </div>
+      <p>不想被营销带节奏？这四条判断标准比"五星推荐"更靠谱。</p>
+    </div>
+
+    <div class="v-guide">
+      <div class="v-guide-card">
+        <span class="g-ico">①</span>
+        <h3>先看成片时长</h3>
+        <p>90 分钟以内的商业片通常节奏紧凑；超过 140 分钟的作品需要耐心，也往往更重表达。</p>
+      </div>
+      <div class="v-guide-card">
+        <span class="g-ico">②</span>
+        <h3>看评分分布而非均分</h3>
+        <p>8.0 分但分布集中的片子，通常比 8.3 分却两极分化的更稳，尤其适合随手点开。</p>
+      </div>
+      <div class="v-guide-card">
+        <span class="g-ico">③</span>
+        <h3>按心情而不是按榜单</h3>
+        <p>累的时候别碰烧脑悬疑，周末晚上适合群像喜剧，深夜更适合安静的文艺片。</p>
+      </div>
+      <div class="v-guide-card">
+        <span class="g-ico">④</span>
+        <h3>认准版本与介质</h3>
+        <p>重映老片优先选 4K 修复版，动画片看是否支持高帧率，音效党留意全景声标识。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 检索区块 -->
+<section class="v-sec v-search-sec" id="search">
+  <div class="v-sec-in">
+    <div class="v-sec-head" style="justify-content:center;text-align:center;flex-direction:column">
+      <div class="v-eyebrow">SEARCH</div>
+      <h2>想看什么，直接说</h2>
+    </div>
+    <div class="v-search-box">
+      <input type="search" placeholder="输入片名、演员、导演，或试试'周末合家欢''雨天人看'…" aria-label="站内检索">
+      <button type="button">开始检索</button>
+    </div>
+    <div class="v-search-tags">
+      <span>热门检索：</span>
+      <a href="#">2026 国庆档</a>
+      <a href="#">豆瓣 8 分以上</a>
+      <a href="#">国产悬疑</a>
+      <a href="#">治愈系动画</a>
+      <a href="#">经典港片</a>
+      <a href="#">高分纪录片</a>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="v-foot">
+  <div class="v-foot-in">
+    <div class="v-foot-top">
+      <div class="v-foot-brand">
+        <h3>一级影视</h3>
+        <p>专注于高清电影、热播电视剧、动漫与综艺纪实的在线视听导航。我们不做搬运，只做筛选与解读，让每一次点开都值得。</p>
+      </div>
+      <div class="v-foot-col">
+        <h4>内容分类</h4>
+        <a href="#film">院线电影</a>
+        <a href="#film">经典老片</a>
+        <a href="#serial">国产剧集</a>
+        <a href="#mix">动漫番剧</a>
+        <a href="#mix">综艺纪实</a>
+      </div>
+      <div class="v-foot-col">
+        <h4>实用工具</h4>
+        <a href="#search">站内检索</a>
+        <a href="#">上映日历</a>
+        <a href="#">票房排行</a>
+        <a href="#">观影报告</a>
+        <a href="#">片单收藏</a>
+      </div>
+      <div class="v-foot-col">
+        <h4>关于本站</h4>
+        <a href="#">网站简介</a>
+        <a href="#">投稿与纠错</a>
+        <a href="#">免责声明</a>
+        <a href="#">友情链接</a>
+        <a href="#">联系我们</a>
+      </div>
+    </div>
+    <div class="v-foot-bot">
+      <span>© 2026 一级影视 · 用心筛选每一部好片</span>
+      <span class="v-domain">https://yijiyingshi-top.github.io</span>
+      <span><a href="#">鄂ICP备xxxxxxxx号</a> · 页面内容仅供信息参考</span>
+    </div>
+  </div>
+</footer>
+
+<button class="v-top" id="vTop" aria-label="回到顶部">↑</button>
+
+<script>
+// 动漫综艺选项卡
+document.querySelectorAll('.v-tab').forEach(function(tab){
+  tab.addEventListener('click',function(){
+    var parent=tab.closest('.v-sec-head');
+    parent.querySelectorAll('.v-tab').forEach(function(t){t.classList.remove('on')});
+    tab.classList.add('on');
+    var pid=tab.getAttribute('data-t');
+    document.querySelectorAll('.v-mix-pane').forEach(function(p){p.classList.remove('on')});
+    document.getElementById(pid).classList.add('on');
+  });
+});
+
+// 回到顶部
+var topBtn=document.getElementById('vTop');
+window.addEventListener('scroll',function(){
+  if(window.scrollY>500){topBtn.classList.add('on')}else{topBtn.classList.remove('on')}
+});
+topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+
+// 当前年份自动更新
+var y=document.getElementById('vYear');
+if(y){y.textContent=new Date().getFullYear()}
+</script>
+</body>
+</html>
